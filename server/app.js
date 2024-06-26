@@ -15,7 +15,7 @@ config();
 
 app.use(
   cors({
-    origin: "https://hire-me-now-six.vercel.app/",
+    origin: "https://hire-me-now-six.vercel.app",
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
