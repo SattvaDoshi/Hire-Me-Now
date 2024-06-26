@@ -7,7 +7,7 @@ import { BASE_URL } from "../../Helpers/Config";
 
 const Navbar = () => {
 
-  const { isAuthorized, setIsAuthorized, user } = useContext(Context);
+  const { isAuthorized, setIsAuthorized, user ,setUser} = useContext(Context);
   const navigateTo = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -21,6 +21,7 @@ const Navbar = () => {
       );
       toast.success(response.data.message);
       setIsAuthorized(false);
+      setUser({})
       navigateTo("/");
     } catch (error) {
       toast.error(error.response.data.message), setIsAuthorized(true);
