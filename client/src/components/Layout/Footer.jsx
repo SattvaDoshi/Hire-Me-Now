@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="py-6 md:px-16 px-3 bg-slate-100 dark:bg-gray-900 flex md:flex-row flex-col md:justify-between justify-center items-center gap-4">
       <span className="md:text-xl  text-lg font-[600] text-gray-700 dark:text-white">
-        Copyright {year} | All Right Reserved
+        Copyright {year} | All Right Reserved by Sattva Doshi
       </span>
       <div className="flex gap-5 items-center">
         <a
