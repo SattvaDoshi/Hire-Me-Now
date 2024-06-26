@@ -15,7 +15,7 @@ config();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://hire-me-now-six.vercel.app/",
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
