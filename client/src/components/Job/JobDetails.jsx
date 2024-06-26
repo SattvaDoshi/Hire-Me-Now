@@ -29,7 +29,7 @@ const JobDetails = () => {
   }
 
   return (
-    <section className="py-8 md:min-h-screen mt-12 bg-gray-100">
+    <section className="py-8 min-h-screen mt-12 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-8">

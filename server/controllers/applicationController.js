@@ -15,7 +15,7 @@ export const postApplication = catchAsyncErrors(async (req, res, next) => {
   }
 
   const { resume } = req.files;
-  const allowedFormats = ["image/png", "image/jpeg", "image/webp","image/jpg"];
+  const allowedFormats = ["image/png", "image/jpeg", "image/webp", "image/jpg"];
 
   if (!allowedFormats.includes(resume.mimetype)) {
     return next(new ErrorHandler("Invalid file type. Please upload a PNG, JPEG, or WEBP file.", 400));
@@ -31,7 +31,7 @@ export const postApplication = catchAsyncErrors(async (req, res, next) => {
 
     const { name, email, coverLetter, phone, jobRole, jobId } = req.body;
 
-    console.log(name, email, coverLetter, phone, jobRole, jobId );
+    console.log(name, email, coverLetter, phone, jobRole, jobId);
 
     if (!name || !email || !coverLetter || !phone || !jobRole || !jobId) {
       return next(new ErrorHandler("Please fill all required fields.", 400));
@@ -105,12 +105,6 @@ export const jobseekerGetAllApplications = catchAsyncErrors(
 
 export const jobseekerDeleteApplication = catchAsyncErrors(
   async (req, res, next) => {
-    const { role } = req.user;
-    if (role === "Employer") {
-      return next(
-        new ErrorHandler("Employer not allowed to access this resource.", 400)
-      );
-    }
     const { id } = req.params;
     const application = await Application.findById(id);
     if (!application) {

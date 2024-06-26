@@ -70,7 +70,7 @@ const MyApplications = () => {
   };
 
   return (
-    <section className="my_applications page min-h-screen">
+    <section className="my_applications page min-h-screen bg-gray-100">
     <div>
       {applications.length === 0 ? (
         <h4>No Applications Found</h4>

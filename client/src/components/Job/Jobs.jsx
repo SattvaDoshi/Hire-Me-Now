@@ -25,7 +25,7 @@ const Jobs = () => {
   }, []);
 
   if (!isAuthorized) {
-    navigateTo("/");
+    navigateTo("/login");
   }
 
   const filteredJobs = jobs.jobs?.filter((job) =>
@@ -34,7 +34,7 @@ const Jobs = () => {
 
   return (
 
-    <section className="p-6 min-h-screen bg-gray-50">
+    <section className="p-6 min-h-screen bg-gray-100">
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">All Available Jobs</h1>
         <div className="flex justify-center mb-6">

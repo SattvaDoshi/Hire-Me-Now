@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBuilding, FaSuitcase, FaUsers, FaUserPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const details = [
@@ -30,7 +31,7 @@ const HeroSection = () => {
   ];
   return (
     <>
-<section className="md:py-20 ">
+<section className="md:py-20 bg-gray-100">
   <div className="max-w-7xl mt-44 md:mt-6 mx-auto px-4">
     <div className="flex flex-col md:flex-row items-center mb-16">
       <div className="md:w-1/2 mb-8 md:mb-0">
@@ -40,6 +41,11 @@ const HeroSection = () => {
           Find your job which suits you and your Profession , get parterned 
           with big Companies and grow your Skills
         </p>
+        <button className="bg-blue-500 text-white px-8 py-2 rounded text-lg mt-6">
+          <Link to='/login'>
+          Get Startrd
+          </Link>
+        </button>
       </div>
       <div className="md:w-1/2">
         <img src="/Hero.png" alt="hero" className="mx-auto" />

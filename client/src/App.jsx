@@ -17,6 +17,7 @@ import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 import { BASE_URL } from "./Helpers/Config";
+import Landing from "./components/Landing/Landing";
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
@@ -29,6 +30,7 @@ const App = () => {
             withCredentials: true,
           }
         );
+        console.log(response.data.user);
         setUser(response.data.user);
         setIsAuthorized(true);
       } catch (error) {
@@ -46,6 +48,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Landing/>}/>
           <Route path="/job/getall" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
           <Route path="/application/:id" element={<Application />} />

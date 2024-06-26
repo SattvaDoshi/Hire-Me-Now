@@ -77,7 +77,7 @@ const PostJob = () => {
   }
 
   return (
-    <div className="job_post page bg-gray-100 py-10">
+    <div className="job_post min-h-screen page bg-gray-100 py-10">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <h3 className="text-3xl font-bold mb-6 text-gray-800">POST NEW JOB</h3>
     <form onSubmit={handleJobPost} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
