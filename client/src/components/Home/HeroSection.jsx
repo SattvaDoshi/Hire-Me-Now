@@ -43,7 +43,7 @@ const HeroSection = () => {
         </p>
         <button className="bg-blue-500 text-white px-8 py-2 rounded text-lg mt-6">
           <Link to='/login'>
-          Get Startrd
+          Get Started
           </Link>
         </button>
       </div>
