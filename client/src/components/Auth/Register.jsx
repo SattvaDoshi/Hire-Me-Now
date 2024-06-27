@@ -8,6 +8,7 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+import { BASE_URL } from "../../Helpers/Config";
 
 const Register = () => {
   const [email, setEmail] = useState("");
