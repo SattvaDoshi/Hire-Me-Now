@@ -34,7 +34,7 @@ app.use(
 app.use("/api/user", userRouter);
 app.use("/api/job", jobRouter);
 app.use("/api/application", applicationRouter);
-dbConnection();
+
 
 app.use(errorMiddleware);
 export default app;
